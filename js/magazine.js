@@ -616,9 +616,6 @@ function addPage(page, book) {
 	// ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
-$(document).on('click', 'video', function() {
-	this.play();
-});
 
 function loadPage(page, pageElement) {
 
