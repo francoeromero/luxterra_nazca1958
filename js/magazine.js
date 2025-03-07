@@ -74,8 +74,12 @@
 function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	
 	let cargarMp4 = $('<video></video>')
-	.attr('src', ruta).attr('autoplay', true).attr('muted', true).attr('controls', true).css({
-		width: ancho,
+	.attr('src', ruta)
+	.attr('autoplay', true)
+	.attr('muted', true)
+	// .attr('controls', true)
+	.css({
+		width: '10rem',
         height: largo,
 		top: posicionY,
 		left: posicionX,
@@ -538,9 +542,8 @@ function addPage(page, book) {
 					// CELULAR
 					
 					// webp = cargarMp4(lista_mp4[0]);
-					webp = cargarMp4(lista_mp4[0],'50%','50%','30%','60%');
+					webp = cargarWebp_1(lista_webp[0]);
 					element.append(webp);
-					
 				}
 				else if(flag_responsivo == true){
 					// PC
