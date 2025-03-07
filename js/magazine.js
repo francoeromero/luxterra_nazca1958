@@ -589,7 +589,7 @@ function addPage(page, book) {
 			if(page == 29){
 				if(flag_responsivo == false){
 					// CELULAR
-					webp = cargarWebp_1(lista_webp[0]);
+					webp = cargarWebp_1(lista_webp_movil[0]);
 					element.append(webp);
 					
 				}
@@ -671,13 +671,13 @@ function addPage(page, book) {
 			if(page == 29){
 				if(flag_responsivo == false){
 					// CELULAR
-					webp = cargarWebp_1(lista_webp[0]);
+					webp = cargarWebp_1(lista_webp_movil[0]);
 					element.append(webp);
 					
 				}
 				else if(flag_responsivo == true){
 					// PC
-					webp = cargarWebp_1(lista_webp[0]);
+					webp = cargarWebp_1(lista_webp_movil[0]);
 					element.append(webp);
 				}
 			}
