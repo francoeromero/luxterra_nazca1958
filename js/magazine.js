@@ -72,14 +72,13 @@
 //     return cargarMp4;
 // }
 function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
-	
+
 	let cargarMp4 = $('<video></video>')
 	.attr('src', ruta)
 	.attr('autoplay', true)
 	.attr('muted', true)
-	// .attr('controls', true)
 	.css({
-		width: '10rem',
+		width: ancho,
         height: largo,
 		top: posicionY,
 		left: posicionX,
@@ -89,10 +88,13 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 		overflow: 'hidden',
 		backgroundSize: 'cover',
 	});
-	
+
 
     return cargarMp4;
 }
+
+
+
 
 function cargarGif_flexible(ruta,ancho,largo,ubicacion_x, ubicacion_y, posicion){
 	let pos = '';
@@ -542,7 +544,7 @@ function addPage(page, book) {
 					// CELULAR
 					
 					// webp = cargarMp4(lista_mp4[0]);
-					webp = cargarWebp_1(lista_webp[0]);
+					webp = cargarMp4(lista_mp4[0],'50%','55%','55%','70%');
 					element.append(webp);
 				}
 				else if(flag_responsivo == true){
