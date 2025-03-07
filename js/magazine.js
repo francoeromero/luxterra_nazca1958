@@ -504,7 +504,10 @@ function addPage(page, book) {
 	// Add the page to the flipbook
 	if (book.turn('addPage', element, page)) {
 		let webp = null;
-
+		lista_webm = [
+			'./webm/0.webm',
+			'./webm/0.webm'
+		]
 		lista_mp4 = [
 			'./video/0.mp4',
 			'./video/0.mp4'
@@ -544,12 +547,12 @@ function addPage(page, book) {
 					// CELULAR
 					
 					// webp = cargarMp4(lista_mp4[0]);
-					webp = cargarMp4(lista_mp4[0],'50%','55%','55%','70%');
+					webp = cargarMp4(lista_webm[0],'50%','55%','55%','70%');
 					element.append(webp);
 				}
 				else if(flag_responsivo == true){
 					// PC
-					webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
+					webp = cargarMp4(lista_webm[0],'65%','53%','70%','55%');
 					
 					// webp = cargarMp4(lista_mp4[0]);
 					element.append(webp);
