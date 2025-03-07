@@ -62,7 +62,8 @@ function cargarMp4(ruta){
 		.css({
 			width: '100%',
 			height: '100%',
-
+			zIndex: 999999,
+			scale:0.1,
 		});
 		return cargarMp4;
 }
