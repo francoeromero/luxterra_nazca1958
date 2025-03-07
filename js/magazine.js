@@ -26,37 +26,50 @@
 
 
 function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
-	let contenedorVideo = $('<div></div>').css({
-		width: ancho,
-		height: largo,
-		top: posicionX,
-		left: posicionY,
-		position: 'absolute',
-		transform: 'translate(-50%, -50%)',
-		zIndex: '9999999', 
-		overflow: 'hidden',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		background: 'black',
-		alignItems: 'center'
-	});
-	let cargarVideo = $('<video></video>')
-	.attr('src', ruta)
-	.attr('controls', true)
-	.attr('autoplay', true)
-	.attr('muted', true) 
-	.css({
-		width: '100%',
-		height: '100%',
-		objectFit: 'contain',
-		backgroundSize: 'cover',
-	});
-	contenedorVideo.append(cargarVideo);
-	return contenedorVideo
+	// let contenedorVideo = $('<div></div>').css({
+	// 	width: ancho,
+	// 	height: largo,
+	// 	top: posicionX,
+	// 	left: posicionY,
+	// 	position: 'absolute',
+	// 	transform: 'translate(-50%, -50%)',
+	// 	zIndex: '9999999', 
+	// 	overflow: 'hidden',
+	// 	display: 'flex',
+	// 	justifyContent: 'center',
+	// 	alignItems: 'center',
+	// 	background: 'black',
+	// 	alignItems: 'center'
+	// });
+	// let cargarVideo = $('<video></video>')
+	// .attr('src', ruta)
+	// .attr('controls', true)
+	// .attr('autoplay', true)
+	// .attr('muted', true) 
+	// .css({
+	// 	width: '100%',
+	// 	height: '100%',
+	// 	objectFit: 'contain',
+	// 	backgroundSize: 'cover',
+	// });
+	// contenedorVideo.append(cargarVideo);
+	// return contenedorVideo
+	let cargarMp4 = $('<video></video>')
+		.attr('src', ruta)
+		.attr('autoplay', true).attr('muted', true).attr('controls', true).css({
+			width: ancho,
+			height: largo,
+			top: posicionY,
+			left: posicionX,
+			position: 'absolute',
+			transform: 'translate(-50%, -50%)',
+			zIndex: '9999999',
+			overflow: 'hidden',
+			backgroundSize: 'cover',
+		});
+		return cargarMp4;
 	
 }
-
 
 function cargarGif_flexible(ruta,ancho,largo,ubicacion_x, ubicacion_y, posicion){
 	let pos = '';
