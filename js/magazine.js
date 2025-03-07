@@ -38,8 +38,9 @@ function cargarMp4(ruta,ancho,largo,posicionY,posicionX){
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		background: 'black',
-		alignItems: 'center'
+		background: 'transparent',
+		alignItems: 'center',
+		zIndex:'999999',
 	});
 	let cargarVideo = $('<video></video>')
 	.attr('src', ruta)
