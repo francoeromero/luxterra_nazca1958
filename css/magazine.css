@@ -1078,7 +1078,6 @@ body{
 		overflow-x: scroll;
 	}
 	.magazine{
-		 border: 2px solid red;
 		 top: -80% !important;
 		/* transform: rotate(-90deg); */
 		scale: 1.6;

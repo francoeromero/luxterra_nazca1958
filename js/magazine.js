@@ -511,10 +511,7 @@ function addPage(page, book) {
 		// Add the initial HTML
 		// It will contain a loader indicator and a gradient
 		element.html('<div class="gradient"></div><div class="loader"></div>');
-		// //////////////////////////////////////////////////////////////////////////////////
 
-
-		// //////////////////////////////////////////////////////////////////////////////////
 		// Crear un elemento <div> que actuará
 		if(page == 29){
 			if(flag_responsivo == false){
