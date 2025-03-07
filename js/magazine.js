@@ -25,7 +25,7 @@
 
 
 
-function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
+function cargarMp4(ruta){
 	// let contenedorVideo = $('<div></div>').css({
 	// 	width: ancho,
 	// 	height: largo,
@@ -56,19 +56,15 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	// return contenedorVideo
 	let cargarMp4 = $('<video></video>')
 		.attr('src', ruta)
-		.attr('autoplay', true).attr('muted', true).attr('controls', true).css({
-			width: ancho,
-			height: largo,
-			top: posicionY,
-			left: posicionX,
-			position: 'absolute',
-			transform: 'translate(-50%, -50%)',
-			zIndex: '9999999',
-			overflow: 'hidden',
-			backgroundSize: 'cover',
+		.attr('autoplay', true)
+		.attr('muted', true)
+		.attr('controls', true)
+		.css({
+			width: '100%',
+			height: '100%',
+
 		});
 		return cargarMp4;
-	
 }
 
 function cargarGif_flexible(ruta,ancho,largo,ubicacion_x, ubicacion_y, posicion){
@@ -517,13 +513,15 @@ function addPage(page, book) {
 			if(page == 29){
 				if(flag_responsivo == false){
 					// CELULAR
-					webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
+					
+					webp = cargarMp4(lista_mp4[0]);
+					// webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
 					element.append(webp);
 					
 				}
 				else if(flag_responsivo == true){
 					// PC
-					webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
+					webp = cargarMp4(lista_mp4[0]);
 					element.append(webp);
 				}
 			}
