@@ -22,6 +22,28 @@
 // applyResponsiveRotation();
 // window.addEventListener('resize', applyResponsiveRotation);
 
+
+
+function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
+	
+	let cargarMp4 = $('<video></video>')
+	.attr('src', ruta)
+	.attr('autoplay', true).attr('muted', true).attr('controls', true).css({
+		width: '10%',
+        height: largo,
+		top: posicionY,
+		left: posicionX,
+		position: 'absolute',
+		transform: 'translate(-50%, -50%)',
+		zIndex: '9999999',
+		overflow: 'hidden',
+		backgroundSize: 'cover',
+	});
+	
+
+    return cargarMp4;
+}
+
 function cargarGif_flexible(ruta,ancho,largo,ubicacion_x, ubicacion_y, posicion){
 	let pos = '';
 	if (posicion == false){
@@ -430,7 +452,11 @@ function addPage(page, book) {
 	// Add the page to the flipbook
 	if (book.turn('addPage', element, page)) {
 		let webp = null;
-		let webpAnterior = null;
+
+		lista_mp4 = [
+			'./video/0.mp4',
+			'./video/0.mp4',
+		]
 		lista_gifs = [
 			'./gifs/0_opt.gif',
 			'./gifs/0_opt.gif'
@@ -467,11 +493,14 @@ function addPage(page, book) {
 		// Crear un elemento <div> que actuará
 		if(page == 29){
 			if(flag_responsivo == false){
-				webp = cargarWebp_1(lista_gifs[0]);
+				// CELULAR
+				webp = cargarMp4(lsita[0],'50%','50%','30%','60%');
 				element.append(webp);
+
 			}
 			else if(flag_responsivo == true){
-				webp = cargarWebp_1(lista_gifs[0]);
+				// PC
+				webp = cargarWebp_1(lista_webp_movil[0]);
 				element.append(webp);
 			}
 		}
@@ -560,7 +589,9 @@ function addPage(page, book) {
 	// ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
-
+$(document).on('click', 'video', function() {
+	this.play();
+});
 
 function loadPage(page, pageElement) {
 
