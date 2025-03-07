@@ -551,7 +551,7 @@ function addPage(page, book) {
 			'./webp/pc/2_g.webp'
 		];
 		lista_webp_movil = [
-			'./webp/cel/0_a.webp',
+			'./webp/cel/0.webp',
 			'./webp/pc/1_b.webp',
 			'./webp/pc/3_c.webp',
 			'./webp/pc/x_d.webp',
