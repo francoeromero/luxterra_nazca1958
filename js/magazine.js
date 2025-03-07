@@ -76,6 +76,7 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	let cargarMp4 = $('<video></video>')
 	.attr('src', ruta)
 	.attr('autoplay', true)
+	.attr('controls', true)
 	.attr('muted', true)
 	.css({
 		width: ancho,
@@ -545,8 +546,7 @@ function addPage(page, book) {
 			if(page == 29){
 				if(flag_responsivo == false){
 					// CELULAR
-					
-					// webp = cargarMp4(lista_mp4[0]);
+				
 					webp = cargarMp4(lista_webm[0],'50%','55%','55%','70%');
 					element.append(webp);
 				}
@@ -554,7 +554,6 @@ function addPage(page, book) {
 					// PC
 					webp = cargarMp4(lista_webm[0],'65%','53%','70%','55%');
 					
-					// webp = cargarMp4(lista_mp4[0]);
 					element.append(webp);
 				}
 			}
