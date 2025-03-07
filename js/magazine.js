@@ -22,41 +22,73 @@
 // applyResponsiveRotation();
 // window.addEventListener('resize', applyResponsiveRotation);
 
+function cargarEnlace( ruta,ancho, largo, posicionY, posicionX) {
+    let contenedorVideo = $('<div></div>').css({
+        width: ancho,
+        height: largo,
+        top: posicionY,
+        left: posicionX,
+        position: 'absolute',
+        transform: 'translate(-50%, -50%)',
+        zIndex: '9999999', 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: 'transparent',
+        zIndex: '999999',
+    });
 
+    // Crear el iframe para el video de YouTube
+    let iframe = $('<iframe></iframe>')
+        .attr('src', `https://www.youtube.com/embed/${ruta}?autoplay=1&mute=1&controls=1`)
+        .attr('frameborder', '0')
+        .attr('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
+        .attr('allowfullscreen', true)
+        .css({
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            backgroundSize: 'cover',
+        });
 
-
-function cargarMp4(ruta,ancho,largo,posicionY,posicionX){
-	let contenedorVideo = $('<div></div>').css({
-		width: ancho,
-		height: largo,
-		top: posicionX,
-		left: posicionY,
-		position: 'absolute',
-		transform: 'translate(-50%, -50%)',
-		zIndex: '9999999', 
-		// overflow: 'hidden',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		background: 'transparent',
-		alignItems: 'center',
-		zIndex:'999999',
-	});
-	let cargarVideo = $('<video></video>')
-	.attr('src', ruta)
-	.attr('controls', true)
-	.attr('autoplay', true)
-	.attr('muted', true) 
-	.css({
-		width: '100%',
-		height: '100%',
-		objectFit: 'contain',
-		backgroundSize: 'cover',
-		transform:'scale(0.5)',
-	});
-	contenedorVideo.append(cargarVideo);
-	return contenedorVideo
+    contenedorVideo.append(iframe);
+    return contenedorVideo;
 }
+
+
+// function cargarMp4(ruta,ancho,largo,posicionY,posicionX){
+// 	let contenedorVideo = $('<div></div>').css({
+// 		width: ancho,
+// 		height: largo,
+// 		top: posicionX,
+// 		left: posicionY,
+// 		position: 'absolute',
+// 		transform: 'translate(-50%, -50%)',
+// 		zIndex: '9999999', 
+// 		// overflow: 'hidden',
+// 		display: 'flex',
+// 		justifyContent: 'center',
+// 		alignItems: 'center',
+// 		background: 'transparent',
+// 		alignItems: 'center',
+// 		zIndex:'999999',
+// 	});
+
+// 	let cargarVideo = $('<video></video>')
+// 	.attr('src', ruta)
+// 	.attr('controls', true)
+// 	.attr('autoplay', true)
+// 	.attr('muted', true) 
+// 	.css({
+// 		width: '100%',
+// 		height: '100%',
+// 		objectFit: 'contain',
+// 		backgroundSize: 'cover',
+// 		transform:'scale(0.5)',
+// 	});
+// 	contenedorVideo.append(cargarVideo);
+// 	return contenedorVideo
+// }
 // function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 
 // 	let cargarMp4 = $('<video></video>')
@@ -493,6 +525,10 @@ function addPage(page, book) {
 	// Add the page to the flipbook
 	if (book.turn('addPage', element, page)) {
 		let webp = null;
+		lista_enlaces = [
+			'watch?v=hpJ32PyJC9Y',   
+			'watch?v=hpJ32PyJC9Y',   
+		]
 		lista_webm = [
 			'./webm/0.webm',
 			'./webm/0.webm'
@@ -535,12 +571,14 @@ function addPage(page, book) {
 				if(flag_responsivo == false){
 					// CELULAR
 				
-					webp = cargarMp4(lista_webm[0],'50%','55%','55%','70%');
+					webp = cargarEnlace(lista_enlaces[0],'50%','55%','55%','70%');
 					element.append(webp);
+					// webp = cargarMp4(lista_webm[0],'50%','55%','55%','70%');
+					// element.append(webp);
 				}
 				else if(flag_responsivo == true){
 					// PC
-					webp = cargarMp4(lista_webm[0],'65%','53%','70%','55%');
+					webp = cargarEnlace(lista_enlaces[0],'65%','53%','70%','55%');
 					
 					element.append(webp);
 				}
