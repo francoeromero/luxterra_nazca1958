@@ -43,7 +43,7 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	});
 	let cargarVideo = $('<video></video>')
 	.attr('src', ruta)
-	.attr('autoplay', true)
+	.attr('controls', true)
 	.attr('autoplay', true)
 	.attr('muted', true) 
 	.css({
@@ -522,55 +522,55 @@ function addPage(page, book) {
 					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
 				}
 			}
-			else if(page == 31){
-				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-			}
+			// else if(page == 31){
+			// 	if(flag_responsivo == false){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// 	else if(flag_responsivo == true){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// }
 	
-			else if(page == 33){
-				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-			}
-			else if(page == 35){
-				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-			}
-			else if(page == 37){
-				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-			}
-			else if(page == 39){
-				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-			}
-			else if(page == 41){
-				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-				}
-			}
+			// else if(page == 33){
+			// 	if(flag_responsivo == false){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// 	else if(flag_responsivo == true){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// }
+			// else if(page == 35){
+			// 	if(flag_responsivo == false){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// 	else if(flag_responsivo == true){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// }
+			// else if(page == 37){
+			// 	if(flag_responsivo == false){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// 	else if(flag_responsivo == true){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// }
+			// else if(page == 39){
+			// 	if(flag_responsivo == false){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// 	else if(flag_responsivo == true){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// }
+			// else if(page == 41){
+			// 	if(flag_responsivo == false){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// 	else if(flag_responsivo == true){
+			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+			// 	}
+			// }
 		} 
 		else{
 
