@@ -33,7 +33,6 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 		left: posicionY,
 		position: 'absolute',
 		transform: 'translate(-50%, -50%)',
-		backgroundSize: 'cover',
 		zIndex: '9999999', 
 		overflow: 'hidden',
 		display: 'flex',
@@ -50,7 +49,8 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	.css({
 		width: '100%',
 		height: '100%',
-		// objectFit: 'contain'
+		objectFit: 'contain',
+		backgroundSize: 'cover',
 	});
 	contenedorVideo.append(cargarVideo);
 	return contenedorVideo
