@@ -22,6 +22,10 @@
 // applyResponsiveRotation();
 // window.addEventListener('resize', applyResponsiveRotation);
 
+if (/iPhone/i.test(navigator.userAgent)) {
+    // El usuario está usando un iPhone
+    alert("El dispositivo es un iPhone.");
+} 
 
 
 function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
@@ -41,6 +45,7 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	});
 	let cargarVideo = $('<video></video>')
 	.attr('src', ruta)
+	.attr('autoplay', true)
 	.attr('autoplay', true)
 	.attr('muted', true) 
 	.css({
