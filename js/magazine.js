@@ -506,6 +506,7 @@ function addPage(page, book) {
 		}
 		else if(page == 31){
 			if(flag_responsivo == false){
+				// CELULAR
 				webp = cargarWebp_1(lista_webp_movil[1]);
 				element.append(webp); 
 			}
@@ -516,8 +517,8 @@ function addPage(page, book) {
 		}
 
 		else if(page == 33){
-			// 3 AMBIENTES
 			if(flag_responsivo == false){
+				// CELULAR
 				webp = cargarWebp_2(lista_webp_movil[2]);
 				element.append(webp); 
 			}
