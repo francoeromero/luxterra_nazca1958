@@ -41,7 +41,7 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	});
 	let cargarVideo = $('<video></video>')
 	.attr('src', ruta)
-	
+	.attr('controls', true)
 	.attr('autoplay', true)
 	.attr('muted', true) 
 	.css({
@@ -519,7 +519,7 @@ function addPage(page, book) {
 		if(page == 29){
 			if(flag_responsivo == false){
 				// CELULAR
-				webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
+				webp = cargarMp4(lista_mp4[0],'66%','54%','70%','55%');
 				element.append(webp);
 			
 

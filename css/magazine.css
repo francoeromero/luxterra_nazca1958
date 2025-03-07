@@ -1009,6 +1009,7 @@ body{
 		position: relative !important;
 		overflow-x: scroll !important;
 		touch-action: pan-x pan-y !important;
+		
 	}
 
 	/* .magazine-viewport .previous-button{
@@ -1076,11 +1077,14 @@ body{
 		margin: auto; /* Centra el elemento automáticamente */
 		overflow-x: scroll;
 	}
-	 .magazine{
+	.magazine{
+		 border: 2px solid red;
+		 top: -80% !important;
 		/* transform: rotate(-90deg); */
 		scale: 1.6;
-		top: 50%;
-        left: 20% !important;
+		/* top: 50% !important; */
+		/* top: -150% !important; */
+        /* left: 10% !important; */
 		
 	} 
 
