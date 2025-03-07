@@ -33,7 +33,7 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 		left: posicionY,
 		position: 'absolute',
 		transform: 'translate(-50%, -50%)',
-		// backgroundSize: 'cover',
+		backgroundSize: 'cover',
 		zIndex: '9999999', 
 		overflow: 'hidden',
 		display: 'flex',
@@ -50,7 +50,7 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	.css({
 		width: '100%',
 		height: '100%',
-		objectFit: 'contain'
+		// objectFit: 'contain'
 	});
 	contenedorVideo.append(cargarVideo);
 	return contenedorVideo
@@ -503,61 +503,18 @@ function addPage(page, book) {
 		if (/iPhone/i.test(navigator.userAgent)) {
 			if(page == 29){
 				if(flag_responsivo == false){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+					// CELULAR
+					webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
+					element.append(webp);
+					
 				}
 				else if(flag_responsivo == true){
-					webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
+					// PC
+					webp = cargarMp4(lista_mp4[0],'65%','53%','70%','55%');
+					element.append(webp);
 				}
 			}
-			// else if(page == 31){
-			// 	if(flag_responsivo == false){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// 	else if(flag_responsivo == true){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// }
-	
-			// else if(page == 33){
-			// 	if(flag_responsivo == false){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// 	else if(flag_responsivo == true){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// }
-			// else if(page == 35){
-			// 	if(flag_responsivo == false){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// 	else if(flag_responsivo == true){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// }
-			// else if(page == 37){
-			// 	if(flag_responsivo == false){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// 	else if(flag_responsivo == true){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// }
-			// else if(page == 39){
-			// 	if(flag_responsivo == false){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// 	else if(flag_responsivo == true){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// }
-			// else if(page == 41){
-			// 	if(flag_responsivo == false){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// 	else if(flag_responsivo == true){
-			// 		webp = cargarMp4(lista_webp[0],'66%','54%','70%','55%');
-			// 	}
-			// }
+
 		} 
 		else{
 
@@ -568,8 +525,6 @@ function addPage(page, book) {
 					webp = cargarWebp_1(lista_webp[0]);
 					element.append(webp);
 					
-				
-	
 				}
 				else if(flag_responsivo == true){
 					// PC
