@@ -51,6 +51,7 @@ function cargarMp4(ruta,ancho,largo,posicionY,posicionX){
 		height: '100%',
 		objectFit: 'contain',
 		backgroundSize: 'cover',
+		transform:'scale(0.5)',
 	});
 	contenedorVideo.append(cargarVideo);
 	return contenedorVideo
