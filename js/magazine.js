@@ -41,7 +41,6 @@ function cargarMp4(ruta,ancho,largo,posicionX,posicionY){
 	});
 	let cargarVideo = $('<video></video>')
 	.attr('src', ruta)
-	.attr('controls', true)
 	.attr('autoplay', true)
 	.attr('muted', true) 
 	.css({
