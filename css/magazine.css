@@ -5,7 +5,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
+.testeando{
+	background: rgba(0, 0, 255, 0.5);
+}
 :root{
 	--alto-revista: 800px;
 }
@@ -483,7 +485,7 @@ body{
 }
 
 .magazine-viewport .zoomer .region{
-	display:none;
+	display:block;
 }
 
 .magazine .region{
@@ -495,8 +497,8 @@ body{
 	/* .magazine .region:nth-child(3) {} */
 	/* background:url(../img/a.gif) center center; */
 	/* background-size: cover; */
-	background: #1d6c82;
-	opacity:0;
+	background: #088fb4 !important;
+	opacity:1 !important;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
 	-ms-border-radius:10px;
